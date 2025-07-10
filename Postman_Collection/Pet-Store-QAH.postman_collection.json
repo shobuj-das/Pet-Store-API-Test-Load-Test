@@ -1,0 +1,507 @@
+{
+	"info": {
+		"_postman_id": "5b791d1f-147a-41ef-a2db-7ff19933bbb3",
+		"name": "Pet-Store-QAH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34618466"
+	},
+	"item": [
+		{
+			"name": "Pet",
+			"item": [
+				{
+					"name": "Add new pet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"KKKKKKKKK\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/pet/9223372036854738396/uploadImage",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"9223372036854738396",
+								"uploadImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find pet by status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pet/findByStatus?status=available",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"findByStatus"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "available"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find pet by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/pet/9223372036854773075",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"9223372036854773075"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update pet details",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"jjjjjjjjjj\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 9223372036854773075,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"ooooooooooooooo\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/pet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete pet by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 9223372036854773075,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"ooooooooooooooo\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/pet/9223372036854773967",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pet",
+								"9223372036854773967"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "Get pet inventories by status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/store/inventory",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place an order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 10,\r\n    \"petId\": 110,\r\n    \"quantity\": 5,\r\n    \"shipDate\": \"2025-07-07T04:33:20.747Z\",\r\n    \"status\": \"placed\",\r\n    \"complete\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/store/order",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get order details by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 10,\r\n  \"petId\": 198772,\r\n  \"quantity\": 7,\r\n  \"shipDate\": \"2025-07-07T04:14:14.423Z\",\r\n  \"status\": \"approved\",\r\n  \"complete\": true\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/store/order/ 10",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"order",
+								" 10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete order by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 10,\r\n  \"petId\": 198772,\r\n  \"quantity\": 7,\r\n  \"shipDate\": \"2025-07-07T04:14:14.423Z\",\r\n  \"status\": \"approved\",\r\n  \"complete\": true\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/store/order/10",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"store",
+								"order",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 10,\r\n    \"username\": \"testUser\",\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"James\",\r\n    \"email\": \"john@email.com\",\r\n    \"password\": \"12345\",\r\n    \"phone\": \"12345\",\r\n    \"userStatus\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create user with list",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 10,\r\n        \"username\": \"theUser\",\r\n        \"firstName\": \"John\",\r\n        \"lastName\": \"James\",\r\n        \"email\": \"john@email.com\",\r\n        \"password\": \"12345\",\r\n        \"phone\": \"12345\",\r\n        \"userStatus\": 1\r\n    },\r\n    {\r\n        \"id\": 101,\r\n        \"username\": \"green\",\r\n        \"firstName\": \"John\",\r\n        \"lastName\": \"James\",\r\n        \"email\": \"green@email.com\",\r\n        \"password\": \"12345\",\r\n        \"phone\": \"12345\",\r\n        \"userStatus\": 1\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/createWithList",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"createWithList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get logged in user details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/user/login?username=green&password=12345",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "green"
+								},
+								{
+									"key": "password",
+									"value": "12345"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log out",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/user/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by username",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "green",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/user/testUser",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"testUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "green",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 10,\r\n  \"username\": \"theUser\",\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"James\",\r\n  \"email\": \"john@email.com\",\r\n  \"password\": \"12345\",\r\n  \"phone\": \"12345\",\r\n  \"userStatus\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/testUser",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"testUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "green",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 10,\r\n  \"username\": \"theUser\",\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"James\",\r\n  \"email\": \"john@email.com\",\r\n  \"password\": \"12345\",\r\n  \"phone\": \"12345\",\r\n  \"userStatus\": 1\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/user/green",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"green"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
